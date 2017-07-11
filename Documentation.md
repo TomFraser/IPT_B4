@@ -6,9 +6,13 @@
 
 ### By Thomas Fraser | 12 Hamilton
 
+### Stages 1-3
+
 <P hidden>Page Break to end the page :thumbsup:</P>
 
 <P style="page-break-before: always"></P>
+
+<h1> </h1>
 
 ## Stage 1 - Identification
 
@@ -22,4 +26,31 @@ The solution to the identified problem is to conceive, design and build a web ba
 
 ## Stage 2 - Conceptualisation 
 
-The goal of the project is to make a useful application that can be used by the staff or students of Brisbane Boys' College to make menial day to day tasks much easier to complete. The success of the system will be determined by the ease of use and overall acceptance of the system into the current system at BBC. The project can be deemed a success if it is widely accepted at the college as the most functional and easy to use system for organising classroom changes. The end user of the project should be able to easily organise and communicate room changes with other staff and students, receiving the burden of organising room changes with lengthy email chains. The system will contain data relating to rooms, classes, teachers and students. This information will be organised into a database and related to each other. The staff members will interact with the database using a Graphical User Interface (GUI) based in a web application written in HTML, CSS, PYTHON and using FLASK.
+The goal of the project is to make a useful application that can be used by the staff or students of Brisbane Boys' College to make menial day to day tasks much easier to complete. The success of the system will be determined by the ease of use and overall acceptance of the system into the current system at BBC. The project can be deemed a success if it is widely accepted at the college as the most functional and easy to use system for organising classroom changes. The end user of the project should be able to easily organise and communicate room changes with other staff and students, receiving the burden of organising room changes with lengthy email chains. The system will contain data relating to rooms, classes, teachers and students. This information will be organised into a database and related to each other. 
+
+<P hidden>Page Break to end the page :thumbsup:</P>
+
+<P style="page-break-before: always"></P>
+
+<h1> </h1>
+
+###### Data Table Example
+
+| STUDENT   | COURSE    | TEACHER   | ROOM    | ROOMCHANGE |
+| --------- | --------- | --------- | ------- | ---------- |
+| StudentID | CourseID  | TeacherID | RoomID  | RequestID  |
+| Name      | Name      | Name      | Block   | Course1ID  |
+| Email     | RoomID    | Email     | Subject | Course2    |
+| CourseID  | TeacherID |           |         |            |
+|           | Old_room  |           |         |            |
+|           | New_Room  |           |         |            |
+
+The staff members will interact with the database using a Graphical User Interface (GUI) based in a web application written in HTML, CSS, PYTHON and using FLASK. The user interface will allow teachers to communicate with the database in a simple and informative fashion. The user interface should be designed so that no to little instruction or training should be provided to the teachers prior to the introduction of the project into the system.
+
+###### WireFrame UI Example
+
+![WireFrame UI](WireFrame UI.png)
+
+## Stage 3 - Formalisation		 
+
+Type word
