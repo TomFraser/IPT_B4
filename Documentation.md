@@ -36,14 +36,16 @@ The goal of the project is to make a useful application that can be used by the 
 
 ###### Data Table Example
 
-| STUDENT   | COURSE    | TEACHER   | ROOM    | ROOMCHANGE |
-| --------- | --------- | --------- | ------- | ---------- |
-| StudentID | CourseID  | TeacherID | RoomID  | RequestID  |
-| Name      | Name      | Name      | Block   | Course1ID  |
-| Email     | RoomID    | Email     | Subject | Course2    |
-| CourseID  | TeacherID |           |         |            |
-|           | Old_room  |           |         |            |
-|           | New_Room  |           |         |            |
+PK = Primary Key, FK = Foreign Key
+
+| STUDENT        | COURSE         | TEACHER        | ROOM        | ROOMCHANGE     |
+| -------------- | -------------- | -------------- | ----------- | -------------- |
+| StudentID (PK) | CourseID (PK)  | TeacherID (PK) | RoomID (PK) | RequestID (PK) |
+| Name           | Name           | Name           | Block       | Course1ID (FK) |
+| Email          | RoomID (FK)    | Email          | Subject     | Course2 (FK)   |
+| CourseID (FK)  | TeacherID (FK) |                |             |                |
+|                | Old_room       |                |             |                |
+|                | New_Room       |                |             |                |
 
 The staff members will interact with the database using a Graphical User Interface (GUI) based in a web application written in HTML, CSS, PYTHON and using FLASK. The user interface will allow teachers to communicate with the database in a simple and informative fashion. The user interface should be designed so that no to little instruction or training should be provided to the teachers prior to the introduction of the project into the system.
 
@@ -51,6 +53,65 @@ The staff members will interact with the database using a Graphical User Interfa
 
 ![WireFrame UI](WireFrame UI.png)
 
+<h1> </h1>
+
 ## Stage 3 - Formalisation		 
 
-Type word
+###### Elementary Facts
+
+**STUDENT** has StudentID (number)
+
+**STUDENT** has Name (text)
+
+**STUDENT** has Email (text)
+
+**STUDENT** has CourseID (number)
+
+<h1></h1>
+
+**COURSE** has CourseID (number)
+
+**COURSE** has Name (text)
+
+**COURSE** has RoomID (number)
+
+**COURSE** has TeacherID (text)
+
+**COURSE** has Old_Room (number)
+
+**COURSE** has New_Room (number)
+
+<h1></h1>
+
+**TEACHER** has TeacherID (number)
+
+**TEACHER** has Name (text)
+
+**TEACHER** has Email (text)
+
+<h1></h1>
+
+**ROOM** has RoomID (number)
+
+**ROOM** has Block (text)
+
+**ROOM** has Subject (text)
+
+<h1></h1>
+
+**ROOMCHANGE** RequestID (number)
+
+**ROOMCHANGE** Course1ID (number)
+
+**ROOMCHANGE** Course2ID (number)
+
+###### Elementary Facts (SQL)
+
+```sql
+STUDENT(StudentID INT, Name TEXT, Email TEXT, CourseID INT);
+COURSE(CourseID INT, Name TEXT, RoomID INT, TeacherID INT, Old_Room INT, New_Room INT);
+TEACHER(TeacherID INT, Name TEXT, Email, TEXT);
+ROOM(RoomID INT, Block TEXT, Subject TEXT);
+ROOMCHANGE(RequestID INT, Course1ID INT, Course2ID INT);
+```
+
