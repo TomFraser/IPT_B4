@@ -59,51 +59,51 @@ The staff members will interact with the database using a Graphical User Interfa
 
 ###### Elementary Facts
 
-**STUDENT** has StudentID (number)
+**STUDENT** has StudentID
 
-**STUDENT** has Name (text)
+**STUDENT** has Name
 
-**STUDENT** has Email (text)
+**STUDENT** has Email 
 
-**STUDENT** has CourseID (number)
-
-<h1></h1>
-
-**COURSE** has CourseID (number)
-
-**COURSE** has Name (text)
-
-**COURSE** has RoomID (number)
-
-**COURSE** has TeacherID (text)
-
-**COURSE** has Old_Room (number)
-
-**COURSE** has New_Room (number)
+**STUDENT** has CourseID 
 
 <h1></h1>
 
-**TEACHER** has TeacherID (number)
+**COURSE** has CourseID 
 
-**TEACHER** has Name (text)
+**COURSE** has Name 
 
-**TEACHER** has Email (text)
+**COURSE** has RoomID 
 
-<h1></h1>
+**COURSE** has TeacherID 
 
-**ROOM** has RoomID (number)
+**COURSE** has Old_Room 
 
-**ROOM** has Block (text)
-
-**ROOM** has Subject (text)
+**COURSE** has New_Room 
 
 <h1></h1>
 
-**ROOMCHANGE** RequestID (number)
+**TEACHER** has TeacherID 
 
-**ROOMCHANGE** Course1ID (number)
+**TEACHER** has Name 
 
-**ROOMCHANGE** Course2ID (number)
+**TEACHER** has Email 
+
+<h1></h1>
+
+**ROOM** has RoomID 
+
+**ROOM** has Block 
+
+**ROOM** has Subject 
+
+<h1></h1>
+
+**ROOMCHANGE** RequestID 
+
+**ROOMCHANGE** Course1ID 
+
+**ROOMCHANGE** Course2ID 
 
 ###### Elementary Facts (SQL)
 
@@ -114,4 +114,36 @@ TEACHER(TeacherID INT, Name TEXT, Email, TEXT);
 ROOM(RoomID INT, Block TEXT, Subject TEXT);
 ROOMCHANGE(RequestID INT, Course1ID INT, Course2ID INT);
 ```
+
+###### Conceptual Schema Diagram (CSD)
+
+![CSG FINAL](CSG FINAL.svg)
+
+<P hidden>Page Break to end the page :thumbsup:</P>
+
+<P style="page-break-before: always"></P>
+
+<h1> </h1>
+
+###### Optimal Normal Form CSD
+
+![CSG ONF FINAL](CSD ONF FINAL.svg)
+
+
+
+<P hidden>Page Break to end the page :thumbsup:</P>
+
+<P style="page-break-before: always"></P>
+
+<h1> </h1>
+
+###### Entity Relation Diagram
+
+###### ![ERD FINAL](ERD FINAL.svg)
+
+
+
+###### UI Design
+
+
 
