@@ -12,27 +12,25 @@
 
 <P style="page-break-before: always"></P>
 
-<h1> </h1>
-
 ## Stage 1 - Identification
+
+Stage 1 - Identification
 
 #### Preamble
 
-Classroom allocation can often be a difficult and messy process for both teachers and students of an educational institute such as Brisbane Boys' College. As the current system stands, there is a break in communication between teachers and students in this regard. Often room changes are never communicated to students leading to wasting time with students scrambling to find their new classroom.
+All too often do room changes at schools cause confusion and cause a waste of time for both staff and students. AS the current system stands, there is no clear communication between students and staff relating room changes. Room changes are often never communicated to students. This project to be introduced aims to solve this problem with automation and database controlled information.
 
 #### Solution
 
-The solution to the identified problem is to conceive, design and build a web based application using Python and Flask that allows teachers to create, modify and alert students to room changes. The solution must be capable of allowing teachers to request room changes, confirm room changes while giving a reason and to notify students via either email or integration with schoolbox, the primary web tool used at the school. Teachers should have the ability to, through a web based interface written in HTML, CSS and DJANGO (implemented from Flask), view the class allocated to a classroom in a period and request a room change. The teacher would enter the start time and end time that the class is required, the class to ocupy the room change and any notes such as a reason for the change. This information will then be send (via email) to the staff member/s ocupying the requested classroom asking for a room change. The staff memeber will then be offered a change to accept change. If the change is accepted, the teacher will be found a new classroom automatically by the system to move to. Once this process is completed, both teachers will be emailed a confirmation of the switch and the students of both classes will be either emailed or notified via schoolbox about the changes and the reason.
+The aforementioned project provides a solution to the problem of classroom scheduling. The solution to the problem is to conceive, design and build a web based application using Python and Flask that will allow teachers to create, modify and notify students to room changes. The solution must be capable of allowing teachers to request room changes, confirm room changes wile giving a reason and to notify students via either email or integration with school box, the primary web tool used at the school. Teachers should have the ability to, via a web interface, view the class allocated to a classroom in a period and request a change. The system should be intuitive and the staff should have to enter minimal details. Some details required would be the time frame that the classroom is required for, the date and a reason for the change. This information would then be sent via email to the staff member occupying the requested classroom. The staff member will then be offered a chance to accept the change. If the change is accepted, the teacher will be found a new free classroom automatically by the system. Once this process is completed, both teacher will be emailed a confirmation of the switch and the students of both classes will either be emailed or notified via school box about the changes.
 
 ## Stage 2 - Conceptualisation 
 
-The goal of the project is to make a useful application that can be used by the staff or students of Brisbane Boys' College to make menial day to day tasks much easier to complete. The success of the system will be determined by the ease of use and overall acceptance of the system into the current system at BBC. The project can be deemed a success if it is widely accepted at the college as the most functional and easy to use system for organising classroom changes. The end user of the project should be able to easily organise and communicate room changes with other staff and students, receiving the burden of organising room changes with lengthy email chains. The system will contain data relating to rooms, classes, teachers and students. This information will be organised into a database and related to each other. 
+The goal of the project is to make a useful application that can be used by the staff and students of Brisbane Boys' College to make menial day to day tasks much easier and intuitive to complete. The success of the system will be determined by two factors. The ease of use of the system and overall acceptance of the system by staff. The project can be deemed a success if it is widely accepted at the college as the most functional system for organising room changes. The end user of the project should be able to easily organise room changes without length email chains or little communication. The system will contain data relating to rooms, classes, teachers, students and subjects. The information will be organised into tables in a database and related to each other using primary and foreign keys.
 
 <P hidden>Page Break to end the page :thumbsup:</P>
 
 <P style="page-break-before: always"></P>
-
-<h1> </h1>
 
 ###### Data Table Example
 
@@ -47,15 +45,15 @@ PK = Primary Key, FK = Foreign Key
 |                | Old_room       |                |             |                |
 |                | New_Room       |                |             |                |
 
-The staff members will interact with the database using a Graphical User Interface (GUI) based in a web application written in HTML, CSS, PYTHON and using FLASK. The user interface will allow teachers to communicate with the database in a simple and informative fashion. The user interface should be designed so that no to little instruction or training should be provided to the teachers prior to the introduction of the project into the system.
+The staff members will interact with the database using a Graphical User Interface (GUI) based in a web browser that will be written in HTML and CSS for the front end with a robust PYTHON and FLASK backend. The user interface will allow teachers to access with the database in a simple and informative fashion. The user interface should be designed so that no to little instruction or training should be provided to the teachers prior to the introduction of the project into the system.
 
 ###### WireFrame UI Example
 
 ![WireFrame UI](WireFrame UI.png)
 
-<h1> </h1>
-
 ## Stage 3 - Formalisation		 
+
+==//I Should have some writing here==
 
 ###### Elementary Facts
 
@@ -123,8 +121,6 @@ ROOMCHANGE(RequestID INT, Course1ID INT, Course2ID INT);
 
 <P style="page-break-before: always"></P>
 
-<h1> </h1>
-
 ###### Optimal Normal Form CSD
 
 ![CSG ONF FINAL](CSD ONF FINAL.svg)
@@ -135,11 +131,9 @@ ROOMCHANGE(RequestID INT, Course1ID INT, Course2ID INT);
 
 <P style="page-break-before: always"></P>
 
-<h1> </h1>
+###### Relational Schema Diagram
 
-###### Entity Relation Diagram
-
-###### ![ERD FINAL](ERD FINAL.svg)
+![ERD FINAL](ERD FINAL.svg)
 
 
 
