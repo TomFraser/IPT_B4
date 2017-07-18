@@ -105,15 +105,36 @@ The staff members will interact with the database using a Graphical User Interfa
 
 **ROOMCHANGE** '2038' Course2ID '*ITS*'
 
-###### Elementary Facts (SQL)
+###### Data Dictionary
 
-```sql lite
-STUDENT(StudentID INT, Name TEXT, Email TEXT, CourseID INT);
-COURSE(CourseID INT, Name TEXT, RoomID INT, TeacherID INT, Old_Room INT, New_Room INT);
-TEACHER(TeacherID INT, Name TEXT, Email, TEXT);
-ROOM(RoomID INT, Block TEXT, Subject TEXT);
-ROOMCHANGE(RequestID INT, Course1ID INT, Course2ID INT);
-```
+| Field Name        | Data Type | Constraint  | Description                              |
+| ----------------- | --------- | ----------- | ---------------------------------------- |
+| **STUDENT TABLE** |           |             |                                          |
+| StudentID         | INT       | Primary Key | Student Identifier                       |
+| Student Name      | TEXT      | Not null    | Name of the student                      |
+| Student Email     | TEXT      | Not null    | Email of the student                     |
+| **SUBJECT TABLE** |           |             |                                          |
+| SubjectID         | INT       | Primary Key | Subject Identifier                       |
+| Name              | TEXT      | Not null    | Name of the subject                      |
+| RoomID            | INT       | Foreign Key | Room that the class is normally in       |
+| TeacherID         | INT       | Foreign Key | Identifier for the teacher taking the class |
+| Old_Room          | INT       | Not null    | Old room for the subject                 |
+| New_Room          | INT       | Not null    | New room for the subject                 |
+| **TEACHER TABLE** |           |             |                                          |
+| TeacherID         | INT       | Primary Key | Teacher Identifier                       |
+| Teacher Name      | TEXT      | Not null    | Name of the teacher                      |
+| Teacher Email     | TEXT      | Not null    | Email of the email                       |
+| **ROOM TABLE**    |           |             |                                          |
+| RoomID            | INT       | Primary Key | Identifier of the room                   |
+| Block             | TEXT      | Not null    | Building that the class room is in       |
+| Subject           | TEXT      | Not null    | The primary subject for the room         |
+| **REQUEST TABLE** |           |             |                                          |
+| RequestID         | INT       | Primary Key | The room change request Identifier       |
+| Course1ID         | INT       | Not null    | STUDENT-SUBJECT table relating to course 1 |
+| Course2ID         | INT       | Not null    | STUDENT-SUBJECT table relating to course 2 |
+| **SS TABLE**      |           |             |                                          |
+| StudentSubjectID  | INT       | Primary Key | The ID for the combination table of student and subject |
+|                   |           |             |                                          |
 
 ###### Conceptual Schema Diagram (CSD)
 
