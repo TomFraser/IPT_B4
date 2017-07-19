@@ -25,6 +25,24 @@
     border-radius: 20px;
 }
 
+#loginBar{
+    display: inline-block;
+    line-height: 7vh;
+    font-size: 1.7vh;
+    width: auto;
+    height: 35vh;
+    margin-top: 32.5vh;
+    margin-right: 32.5%;
+    /*background-color: #424B54;*/
+    float: right;
+    transition: all .5s linear;
+}
+
+#loginMenu{
+    text-align: center;
+    background-color: #424B54;
+}
+
 html, body {
     height: 100vh;
     margin: 0;
