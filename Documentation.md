@@ -12,6 +12,14 @@
 
 <P style="page-break-before: always"></P>
 
+### Table of Contents
+
+[TOC]
+
+<P hidden>Page Break to end the page :thumbsup:</P>
+
+<P style="page-break-before: always"></P>
+
 ## Stage 1 - Identification
 
 #### Preamble
@@ -50,6 +58,49 @@ The staff members will interact with the database using a Graphical User Interfa
 <P hidden>Page Break to end the page :thumbsup:</P>
 
 <P style="page-break-before: always"></P>
+
+###### Example Data Table
+
+| STUDENT TABLE | Data                 |
+| ------------- | -------------------- |
+| StudentID     | 18135                |
+| Student Name  | Thomas Fraser        |
+| Student Email | 18135@bbc.qld.edu.au |
+| Subject ID    | 181201               |
+
+| SUBJET TABLE | Data   |
+| ------------ | ------ |
+| 1SubjectID   | 181201 |
+| Name         | IPT    |
+| RoomID       | R207   |
+| TeacherID    | 1415   |
+| Old_room     | R207   |
+| New_room     | R205   |
+
+| TEACHER TABLE | Data                    |
+| ------------- | ----------------------- |
+| TeacherID     | 1415                    |
+| Teacher Name  | Ron Plumlee             |
+| Teacher Email | rplumlee@bbc.qld.edu.au |
+|               |                         |
+
+| ROOM TABLE | Data       |
+| ---------- | ---------- |
+| RoomID     | R207       |
+| Block      | Rudd Block |
+| Subject    | IPT        |
+
+| ROOMCHANGE TABLE | Data |
+| ---------------- | ---- |
+| RequestID        | 2038 |
+| Course1ID        | IPT  |
+| Course2ID        | ITS  |
+|                  | Data |
+
+| STUDENT-SUBJECT TABLE | Data |
+| --------------------- | ---- |
+| StudentSubjectID      | 6574 |
+|                       |      |
 
 ## Stage 3 - Formalisation		 
 
@@ -168,17 +219,25 @@ The following elementary facts, data dictionaries, CSDs, RSDs and UI/form design
 
 Landing Page
 
+The landing page is where the end user will enter when they direct to the web address of the web 						application. The user interface contains a sidebar with an imbedded login button and A BBC Logo. When the login button is pressed, the sidebar animates to the right and the BBC Logo slides off screen. The screen animates to the Login Page.
+
 <img src="UI/UI_LoginLanding.png" width="700px"/>
 
 Login Page (Animated from Landing Page)
+
+The login page is animated from the landing page. The login page allows the user the enter a username and password to login to the class room changing system. The username and password will be the same as the ones used by the schools IT system. Therefore, this part of the database will interface with the school IT system and therefore no login information needs to be stored in the database.
 
 <img src="UI/UI_Login2.png" width="700px" />
 
 Class Search Page (Landing page after login)
 
+Once a user is logged in they are faced with a class search page, which is the landing page from login. The sidebar returns to it original width from the landing page and user details such as an image and name are displayed. The main selectors for interaction with the website are also located in the sidebar. The primary options are 'CREATE', 'VIEW' and 'LOGOUT'. The 'CREATE' button is used to create a room change by interactively clicking on the Rooms timetable as displayed below. The 'VIEW' button redirects to the page displayed below. The 'LOGOUT' button logs the user out of the service.
+
 <img src="UI/UI_ClassSearch.png" width="700px" />
 
 View Page (After pressing view on Class Search Page)
+
+The view page contains two tables and a sidebar. The tables include room changes that the teacher is part of and room change request made to the teachers classes. The sidebar has the 'VIEW' tab highlighted as it is the current selected option. The 'Requested Room Changes' table have options for the teacher to accept a room change.
 
 <img src="UI/UI_View.png" width="700px" />
 

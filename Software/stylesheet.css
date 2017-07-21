@@ -39,8 +39,11 @@
 }
 
 #loginMenu{
-    text-align: center;
-    background-color: #424B54;
+    background-color: white;
+    line-height: 7vh;
+    width: 35%;
+    margin-left: 32.5%;
+    height: 4vh;
 }
 
 html, body {
