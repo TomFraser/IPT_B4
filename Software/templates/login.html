@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    </head>
+    <body>
+        <div id="login-image">
+            <img id="bbc-logo" src="{{url_for('static', filename='images/BBCLogo.png')}}">
+        </div>
+        <div id="login-bar">
+            <p id="title">BRISBANE BOYS COLLEGE</p>
+            <p id="sub-title">eREQ</p>
+            <div id="spacer"></div>
+            <form id="form-box" action="{{url_for('splash')}}" method="post">
+                <input class="input-box" type="email" name="email" placeholder="Email">
+                <input class="input-box" type="password" name="password" placeholder="Password">
+                <input class="input-button" type="submit" value="Login">
+            </form>
+            <p id="copyright" href="https://www.bbc.qld.edu.au">(c) Brisbane Boys' College</p>
+        </div>
+    </body>
+</html>

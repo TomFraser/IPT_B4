@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Creating Change</title>
+        <link type="text/css" rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="sidebar">
+            <div id="spacer3"></div>
+            <img id="user-image" src="images/Stv.jpeg">
+            <p id="sub-title">Steven Lau</p>
+            <div id="spacer"></div>
+            <div id="sidebar-menu">
+                <button class="sidebar-btn">CREATE</button>
+                <button class="sidebar-btn">VIEW</button>
+                <button class="sidebar-btn2">LOGOUT</button>
+            </div>
+        </div>
+        <div id="internal-body">
+            <p id="title2">Create Room Change - R207</p>
+            <form id="create-form" method="POST">
+                <p id="sub-title2">Date</p>
+                <input class="input-box3" type="date" name="date">
+                <p id="sub-title2">Start Period</p>
+                <select id="dropdown3" name="startPeriod">
+                    <option class="dropdown-option" value="one">Period 1</option>
+                    <option class="dropdown-option" value="two">Period 2</option>
+                    <option class="dropdown-option" value="three">Period 3</option>
+                    <option class="dropdown-option" value="four">Period 4</option>
+                    <option class="dropdown-option" value="five">Period 5</option>
+                    <option class="dropdown-option" value="six">Period 6</option>
+                    <option class="dropdown-option" value="seven">Period 7</option>
+                </select>
+                <p id="sub-title2">End Period</p>
+                <select id="dropdown3" name="endPeriod">
+                    <option class="dropdown-option" value="one">Period 1</option>
+                    <option class="dropdown-option" value="two">Period 2</option>
+                    <option class="dropdown-option" value="three">Period 3</option>
+                    <option class="dropdown-option" value="four">Period 4</option>
+                    <option class="dropdown-option" value="five">Period 5</option>
+                    <option class="dropdown-option" value="six">Period 6</option>
+                    <option class="dropdown-option" value="seven">Period 7</option>
+                </select>
+                <input type="submit" class="input-button2" value="Create">
+                <input type="submit" class="input-button3" value="Cancel">
+            </form>
+        </div>
+    </body>
+</html>
