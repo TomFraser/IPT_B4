@@ -32,7 +32,7 @@
 </div>
 <div id="table-box">
     <div id="spacer3"></div>
-    <p id="title2">Room Information - R207</p>
+    <p id="title2">Room Information - {{ roomDetails.room}}</p>
     <table>
         <tr>
             <th>ROOM</th>
@@ -41,10 +41,10 @@
             <th>TEACHER</th>
         </tr>
         <tr>
-            <th>R207</th>
-            <th>1</th>
-            <th>IPT01</th>
-            <th>Ron Plumlee</th>
+            <th>{{roomDetails.room}}</th>
+            <th>{{roomDetails.period}}</th>
+            <th>{{roomDetails.class}}</th>
+            <th>{{roomDetails.teacher}}</th>
     </table>
     <form>
         <input class="input-button2" type="submit" value="Create Change">
