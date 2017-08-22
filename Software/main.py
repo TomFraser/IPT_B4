@@ -17,11 +17,23 @@ def splash():
 @app.route('/home', methods=['GET', 'POST'])
 def landingPage():
     if request.method == "POST":
-        if request.form['sidemenuButton'] == 'logout':
+        requestType = request.form['sidemenuButton']
+        if requestType == 'logout':
             return redirect("/")
+        elif requestType == 'view':
+            return redirect("/view")
+        elif requestType == 'create':
+            return redirect("/create")
     elif request.method == "GET":
         return render_template("landingPage.html")
 
+@app.route('/view', methods=['GET', 'POST'])
+def viewChanges():
+    return "VIEW!"
+
+@app.route('/create', methods=['GET', 'POST'])
+def createChagnes():
+    return "CREATE!"
 
 if __name__ == "__main__":
     app.run(debug=True)
