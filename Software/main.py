@@ -25,7 +25,8 @@ def landingPage():
         elif requestType == 'create':
             return redirect("/create")
     elif request.method == "GET":
-        return render_template("landingPage.html")
+        staffMember = [dict(name="Steven Chi Lau", userImg="images/Stv.jpeg")]
+        return render_template("landingPage.html", staffUser=staffMember)
 
 @app.route('/view', methods=['GET', 'POST'])
 def viewChanges():

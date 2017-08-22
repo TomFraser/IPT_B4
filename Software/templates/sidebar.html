@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% block title %} {% endblock %}
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    </head>
+    <body>
+        <div id="sidebar">
+            <div id="spacer3"></div>
+            <img id="user-image" src="static/{{staffUser['userImg']}}">
+            <p id="sub-title">{% block user %}{% endblock %}</p>
+            <div id="spacer"></div>
+            <div id="sidebar-menu">
+                <form method="post">
+                    <button class="sidebar-btn" name="sidemenuButton" value="create">CREATE</button>
+                    <button class="sidebar-btn" name="sidemenuButton" value="view">VIEW</button>
+                    <button class="sidebar-btn2" name="sidemenuButton" value="logout">LOGOUT</button>
+                </form>
+            </div>
+        </div>
+        <div id="content">
+             {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
