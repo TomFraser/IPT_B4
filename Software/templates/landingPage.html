@@ -3,18 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>Home</title>
-        <link type="text/css" rel="stylesheet" href="main.css">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     </head>
     <body>
         <div id="sidebar">
             <div id="spacer3"></div>
-            <img id="user-image" src="images/Stv.jpeg">
+            <img id="user-image" src="{{url_for('static', filename='images/Stv.jpeg')}}">
             <p id="sub-title">Steven Lau</p>
             <div id="spacer"></div>
             <div id="sidebar-menu">
-                <button class="sidebar-btn">CREATE</button>
-                <button class="sidebar-btn">VIEW</button>
-                <button class="sidebar-btn2">LOGOUT</button>
+                <form method="post">
+                    <button class="sidebar-btn" name="sidemenuButton" value="create">CREATE</button>
+                    <button class="sidebar-btn" name="sidemenuButton" value="view">VIEW</button>
+                    <button class="sidebar-btn2" name="sidemenuButton" value="logout">LOGOUT</button>
+                </form>
             </div>
         </div>
         <div id="content">
