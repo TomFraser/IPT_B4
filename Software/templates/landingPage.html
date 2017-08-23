@@ -9,7 +9,7 @@
 
 <div id="search-box">
     <p id="title2">Timetable Search</p>
-    <form>
+    <form method="post">
         <input class="input-box2" type="text" name="room" placeholder="Room Search">
         <select name="date" id="dropdown">
             <option class="dropdown-option" value="monday">Monday</option>
@@ -27,12 +27,12 @@
             <option class="dropdown-option" value="six">Period 6</option>
             <option class="dropdown-option" value="seven">Period 7</option>
         </select>
-        <input class="input-button2" type="submit" value="Search">
+        <input class="input-button2" type="submit" name="button" value="Search">
     </form>
 </div>
 <div id="table-box">
     <div id="spacer3"></div>
-    <p id="title2">Room Information [{{ roomDetails.room }}]</p>
+    <p id="title2">Room Information - {{ roomDetails.room }}</p>
     <table>
         <tr>
             <th>ROOM</th>

@@ -20,11 +20,11 @@ def loginRequired(f):
         if loggedIn():
             return f(*args, **kwargs)
         else:
-            return redirect("/")
+            return redirect("/login")
 
     return wrap
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def splash():
     session.pop("userEmail", None)
     if request.method == "POST":
@@ -39,9 +39,9 @@ def splash():
                 session["userEmail"] = email
                 return redirect("/home")
             else:
-                return redirect("/")
+                return redirect("/login")
         else:
-            return redirect("/")
+            return redirect("/login")
     elif request.method == 'GET':
 
         return render_template("login.html")
@@ -50,15 +50,26 @@ def splash():
 @loginRequired
 def landingPage():
     if request.method == "POST":
-        requestType = request.form['sidemenuButton']
+        requestType = request.form['button']
         if requestType == 'logout':
             session.pop("userEmail", None)
-            return redirect("/")
+            return redirect("/login")
+        elif requestType == "Search":
+            date = request.form["date"]
+            period = request.form["period"]
+            room = request.form["room"]
+            name = database.execute("SELECT name FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]
+            userImage = "https://schoolbox.bbc.qld.edu.au/portrait.php?userId=" + str(database.execute("SELECT schoolboxstaffId FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]) + "&size=profile"
+            staffMember = {"name":name, "userImg":userImage}
+            # query = database.execute("SELECT room, subjectID, teacher FROM subject WHERE room = ? AND period = ? AND day = ?", room, period, date).fetchone()[0]
+            roomDeets = {"room": room,"period": period, "class": "IPT1201", "teacher": "Ron Plumlee"}
+            return render_template("landingPage.html", staffUser=staffMember, roomDetails=roomDeets)
+
     elif request.method == "GET":
-        name = database.execute("SELECT name, staffId FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]
-        userImage = "userData/UserImage/" + str(database.execute("SELECT staffID FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]) + ".jpeg"
+        name = database.execute("SELECT name FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]
+        userImage = "https://schoolbox.bbc.qld.edu.au/portrait.php?userId=" + str(database.execute("SELECT schoolboxstaffId FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]) + "&size=profile"
         staffMember = {"name":name, "userImg":userImage}
-        roomDeets = {"room":"R207", "period":"1", "class":"IPT1201", "teacher":"Ron Plumlee"}
+        roomDeets = {"room":"", "period":"-", "class":"-", "teacher":"-"}
         return render_template("landingPage.html", staffUser=staffMember, roomDetails=roomDeets)
 
 @app.route('/view', methods=['GET', 'POST'])

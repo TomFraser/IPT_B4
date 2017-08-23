@@ -36,5 +36,7 @@ def setupDB():
     )''')
 
     database.execute('''CREATE TABLE STUDENT-COURSE (
-
+        
     )''')
+
+setupDB()

@@ -8,14 +8,14 @@
     <body>
         <div id="sidebar">
             <div id="spacer3"></div>
-            <img id="user-image" src="static/{{staffUser.userImg}}">
+            <img id="user-image" src="{{staffUser.userImg}}">
             <p id="sub-title">{% block user %}{% endblock %}</p>
             <div id="spacer"></div>
             <div id="sidebar-menu">
                 <form method="post">
-                    <button class="sidebar-btn" name="sidemenuButton" value="create">CREATE</button>
-                    <button class="sidebar-btn" name="sidemenuButton" value="view">VIEW</button>
-                    <button class="sidebar-btn2" name="sidemenuButton" value="logout">LOGOUT</button>
+                    <button class="sidebar-btn" name="button" value="create">CREATE</button>
+                    <button class="sidebar-btn" name="button" value="view">VIEW</button>
+                    <button class="sidebar-btn2" name="button" value="logout">LOGOUT</button>
                 </form>
             </div>
         </div>
