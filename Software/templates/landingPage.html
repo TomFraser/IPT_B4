@@ -10,15 +10,15 @@
 <div id="search-box">
     <p id="title2">Timetable Search</p>
     <form>
-        <input class="input-box2" type="text" placeholder="Room Search">
-        <select id="dropdown">
+        <input class="input-box2" type="text" name="room" placeholder="Room Search">
+        <select name="date" id="dropdown">
             <option class="dropdown-option" value="monday">Monday</option>
             <option class="dropdown-option" value="tuesday">Tuesday</option>
             <option class="dropdown-option" value="wednesday">Wednesday</option>
             <option class="dropdown-option" value="thursday">Thursday</option>
             <option class="dropdown-option" value="friday">Friday</option>
         </select>
-        <select id="dropdown2">
+        <select name="period" id="dropdown2">
             <option class="dropdown-option" value="one">Period 1</option>
             <option class="dropdown-option" value="two">Period 2</option>
             <option class="dropdown-option" value="three">Period 3</option>
@@ -32,7 +32,7 @@
 </div>
 <div id="table-box">
     <div id="spacer3"></div>
-    <p id="title2">Room Information - {{ roomDetails.room}}</p>
+    <p id="title2">Room Information [{{ roomDetails.room }}]</p>
     <table>
         <tr>
             <th>ROOM</th>

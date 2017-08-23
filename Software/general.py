@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-debug = False
-def sendUser(email, password):
-    if debug:
-        print(email)
-        print(password)
-        print("Sending User Data to BBC")
-    #Send user info to BBC
-    return True
+
+def getUserInfo(email, password):
+    return {"name": "Steven Lau", "email":"slau2@bbc.qld.edu.au", "userImg":"images/Stv.jpeg"}
+
+def loggedIn():
+    return "userEmail" in session
