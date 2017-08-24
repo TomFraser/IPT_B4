@@ -55,7 +55,7 @@ def landingPage():
             session.pop("userEmail", None)
             return redirect("/login")
         elif requestType == "Search":
-            date = request.form["date"]
+            day = request.form["date"]
             period = request.form["period"]
             room = request.form["room"]
             name = database.execute("SELECT name FROM staff WHERE email = ?", (session["userEmail"],)).fetchone()[0]
