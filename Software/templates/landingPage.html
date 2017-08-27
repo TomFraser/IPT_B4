@@ -2,7 +2,7 @@
 {% block content %}
 <!-- Title Block -->
 {% block title %}
-    <title>Title</title>
+    <title>Home</title>
 {% endblock %}
 <!-- Username Block -->
 {% block user %}{{staffUser.name}}{% endblock %}
@@ -46,8 +46,8 @@
             <th>{{roomDetails.class}}</th>
             <th>{{roomDetails.teacher}}</th>
     </table>
-    <form>
-        <input class="input-button2" type="submit" value="Create Change">
+    <form method='post'>
+        <input class="input-button2" name="button" type="submit" value="Create Change">
     </form>
 </div>
 {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "sidebar.html" %}
+{% block content %}
+<!-- Title Block -->
+{% block title %}
+    <title>Confirm Request</title>
+{% endblock %}
+<!-- Username Block -->
+{% block user %}{{staffUser.name}}{% endblock %}
+    <p id="title2">Finalise Selection - {{ roomInfo.room }}</p>
+    <p id="sub-title2"><bold>Time Period</bold></p>
+    <p id="sub-title2">
+        Start Period: {{roomInfo.period}}
+        <br></br>
+        End Period: {{end}}
+    </p>
+    <p id="sub-title2"><bold>The Following Teacher Will Be Automatically Contacted</bold></p>
+    {% for n in teachers %}
+    <p id="sub-title2">{{ n[0] }}</p>
+    {% endfor %}
+    <p id="sub-title2"><bold>Change Reason</bold></p>
+    <p id="sub-title2">{{ changeReaon }}</p>
+    <form method="post">
+        <input class="input-button2" type="submit" name="button" value="Submit">
+    </form>
+{% endblock %}

@@ -7,6 +7,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 0px;
 }
+
+bold {
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
 #login-image{
     width: 75%;
     height: 100vh;
@@ -73,6 +79,11 @@ body {
     color: white;
     text-align: center;
     margin-top: 50vh;
+}
+#small-text{
+    font-size: 0.75vw;
+    color: #424B54;
+    text-align: center;
 }
 #sidebar{
     height: 100vh;
@@ -247,4 +258,10 @@ tr:nth-child(odd) {
 }
 #create-form{
     width: 30%;
+}
+#view-table{
+    width: 60vw;
+    margin-left: 10vw;
+    margin-right: 24.75vw;
+    margin-top: 10vh;
 }

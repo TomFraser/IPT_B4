@@ -1,0 +1,47 @@
+{% extends "sidebar.html" %}
+{% block content %}
+<!-- Title Block -->
+{% block title %}
+    <title>View Changes</title>
+{% endblock %}
+<!-- Username Block -->
+{% block user %}{{staffUser.name}}{% endblock %}
+<p id="title2">Your Changes</p>
+{% for n in yourChanges %}
+<table id="view-table">
+    <tr>
+        <th>ROOM</th>
+        <th>DATE</th>
+        <th>START PERIOD</th>
+        <th>END PERIOD</th>
+        <th>REASON</th>
+    </tr>
+    <tr>
+        <th>{{n[0]}}</th>
+        <th>{{n[1]}}</th>
+        <th>{{n[2]}}</th>
+        <th>{{n[3]}}</th>
+        <th>{{n[4]}}</th>
+</table>
+{% endfor %}
+<p id="title2">Other Changes</p>
+{% for n in changes %}
+<table id="view-table">
+    <tr>
+        <th>ROOM</th>
+        <th>DATE</th>
+        <th>START PERIOD</th>
+        <th>END PERIOD</th>
+        <th>REASON</th>
+        <th>MEMBER</th>
+    </tr>
+    <tr>
+        <th>{{n[0]}}</th>
+        <th>{{n[1]}}</th>
+        <th>{{n[2]}}</th>
+        <th>{{n[3]}}</th>
+        <th>{{n[4]}}</th>
+        <th>{{n[5]}}</th>
+</table>
+{% endfor %}
+{% endblock %}

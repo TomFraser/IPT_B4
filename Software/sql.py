@@ -13,17 +13,23 @@ def setupDB():
     )''')
 
     database.execute('''CREATE TABLE STAFF (
-    staffID INTEGER PRIMARY KEY,
-    email TEXT NOT NULL UNIQUE,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL
+    staffID INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    schoolboxstaffID TEXT NOT NULL
     )''')
 
-    database.execute('''CREATE TABLE ROOM (
+    database.execute('''CREATE TABLE ROOMTIMETABLE(
+    room TEXT NOT NULL,
     roomID TEXT PRIMARY KEY,
-    block TEXT NOT NULL,
-    subject TEXT,
-    FOREIGN KEY (subject) REFERENCES COURSE(courseID)
+    day TEXT NOT NULL,
+    period INTEGER NOT NULL,
+    class TEXT NOT NULL,
+    teacher TEXT NOT NULL,
+    teacherID TEXT NOT NULL,
+    FOREIGN KEY (class) REFERENCES COURSE(courseID)
+    FOREIGN KEY (teacher) REFERENCES COURSE(teacher)
+    FOREIGN KEY (teacherID) REFERENCES STAFF(name)
     )''')
 
     database.execute('''CREATE TABLE COURSE (
@@ -33,10 +39,6 @@ def setupDB():
     teacher INTEGER NOT NULL,
     FOREIGN KEY (room) REFERENCES ROOM(roomID),
     FOREIGN KEY (teacher) REFERENCES STAFF(staffID)
-    )''')
-
-    database.execute('''CREATE TABLE STUDENT-COURSE (
-        
     )''')
 
 setupDB()

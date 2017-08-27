@@ -1,0 +1,43 @@
+{% extends "sidebar.html" %}
+{% block content %}
+<!-- Title Block -->
+{% block title %}
+    <title>Title</title>
+{% endblock %}
+<!-- Username Block -->
+{% block user %}{{staffUser.name}}{% endblock %}
+<div id="table-box">
+    <div id="spacer3"></div>
+    <p id="title2">Room Information - {{ roomDetails.room }}</p>
+    <table>
+        <tr>
+            <th>ROOM</th>
+            <th>START PERIOD</th>
+            <th>CLASS TO BE MOVED</th>
+            <th>TEACHER</th>
+        </tr>
+        <tr>
+            <th>{{roomDetails.room}}</th>
+            <th>{{roomDetails.period}}</th>
+            <th>{{roomDetails.class}}</th>
+            <th>{{roomDetails.teacher}}</th>
+    </table>
+    <p id="title2">Room Chain Details</p>
+    <form method="post">
+        <p id="sub-title2">Change Date</p>
+        <input class="input-box2" type="date" name="changeDate" placeholder="">
+        <p id="sub-title2">End Period</p>
+        <select name="endPeriod" id="dropdown">
+            <option class="dropdown-option" value="1">Period 1</option>
+            <option class="dropdown-option" value="2">Period 2</option>
+            <option class="dropdown-option" value="3">Period 3</option>
+            <option class="dropdown-option" value="4">Period 4</option>
+            <option class="dropdown-option" value="5">Period 5</option>
+            <option class="dropdown-option" value="6">Period 6</option>
+            <option class="dropdown-option" value="7">Period 7</option>
+        </select>
+        <textarea class="input-box2" name="reason" cols="40" rows="10" placeholder="Reason"></textarea>
+        <input class="input-button2" type="submit" name="button" value="Request Change">
+    </form>
+</div>
+{% endblock %}
